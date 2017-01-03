@@ -1,0 +1,316 @@
+/**
+* Mixins functions - for each loop, font-face array, etc.
+*/
+/**
+* Setting browser default styling to null
+*/
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+}
+body,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+p,
+iframe,
+form,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+a,
+fieldset,
+textarea,
+img,
+span,
+input,
+button,
+pre,
+code,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+dialog,
+address {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+textarea,
+input,
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+textarea:focus,
+input:focus,
+input::-webkit-outer-spin-button:focus,
+input::-webkit-inner-spin-button:focus {
+  outline: 0 none;
+}
+select {
+  width: 99.99% !important;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: transparent !important;
+  color: #000000;
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+}
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  text-transform: none;
+}
+input:focus::-webkit-input-placeholder,
+input:focus::-moz-placeholder,
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+button {
+  line-height: normal !important;
+}
+button:focus,
+button:active {
+  outline: 0;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+table {
+  border-collapse: collapse;
+}
+table th,
+table td {
+  vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address {
+  font-weight: normal;
+}
+address {
+  font-style: normal;
+}
+small {
+  font-size: 85%;
+}
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+/**
+* Common classes to extend from - includes floating,
+* positions, visibility, transitions.
+*/
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.float-none {
+  float: none;
+}
+.full-width {
+  width: 100%;
+}
+.full-height {
+  height: 100%;
+}
+.width-auto {
+  width: auto;
+}
+.block,
+dialog:not([open]) {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.inline {
+  display: inline;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.default-transition {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.no-transition {
+  -webkit-transition: none;
+  transition: none;
+}
+.hide {
+  display: none;
+}
+.not-visible {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+.hide-overflow {
+  overflow: hidden;
+}
+.auto-overflow,
+body {
+  overflow: auto;
+}
+.no-border,
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0 none;
+}
+.no-border-radius,
+textarea,
+input,
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  border-radius: 0;
+}
+.no-margin {
+  margin: 0;
+}
+.no-padding {
+  padding: 0;
+}
+.no-background {
+  background: none;
+}
+.no-shadow {
+  box-shadow: none;
+}
+.reset-all {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  box-sizing: border-box;
+}
+.enable-pointer,
+button {
+  cursor: pointer;
+}
+.default-pointer {
+  cursor: default;
+}
+.disable-pointer {
+  pointer-events: none;
+}
+.reset-webkit-tap,
+textarea,
+input,
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+button,
+a,
+a:hover,
+a:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.align-right {
+  text-align: right;
+}
+.align-left,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address {
+  text-align: left;
+}
+.align-center,
+table th,
+table td {
+  text-align: center;
+}
+.align-justify {
+  text-align: justify;
+}
+.float-left-auto {
+  float: left;
+  width: auto;
+}
+.float-left-full,
+table,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+iframe,
+pre {
+  float: left;
+  width: 100%;
+}
+.float-right-auto {
+  float: right;
+  width: auto;
+}
+.full-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*# sourceMappingURL=reset.css.map */

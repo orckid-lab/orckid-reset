@@ -1,0 +1,119 @@
+/**
+* Setting browser default styling to null
+*/
+
+// page elements
+html, body {
+	height: 100%;
+}
+
+html {
+	font-size: 10px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: none;
+}
+
+body {
+	&:extend(.auto-overflow);
+}
+
+body, ul, li, ol, dl, dt, dd, p, iframe, form, div, h1, h2, h3, h4, h5, h6, label, a, fieldset, textarea, img, span, input, button, pre, code, article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, dialog, address {
+	.reset-all;
+}
+
+ul {
+	list-style: none;
+}
+
+// form inputs & button
+textarea, input, input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	&:extend(.reset-webkit-tap, .no-border-radius);
+	&:focus {
+		outline: 0 none;
+	}
+}
+
+select {
+	&:extend(.float-auto-left);
+	width: 99.99% !important;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+	background-color: transparent !important;
+	color: rgb(0, 0, 0);
+	-webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+}
+
+select:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 #000;
+}
+
+::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+	text-transform: none;
+}
+
+input:focus::-webkit-input-placeholder, input:focus::-moz-placeholder, input:focus:-ms-input-placeholder {
+	color: transparent;
+}
+
+button {
+	line-height: normal !important;
+	&:extend(.reset-webkit-tap, .enable-pointer);
+	&:focus, &:active {
+		outline: 0;
+	}
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+	&:extend(.no-border);
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+// table
+table {
+	&:extend(.float-left-full);
+	border-collapse: collapse;
+	th, td {
+		vertical-align: middle;
+		&:extend(.align-center);
+	}
+}
+
+// typography
+h1, h2, h3, h4, h5, h6, p, address {
+	font-weight: normal;
+	&:extend(.float-left-full, .align-left);
+}
+
+address {
+	font-style: normal;
+}
+
+small {
+	font-size: 85%;
+}
+
+a, a:hover, a:focus {
+	text-decoration: none;
+	outline: none;
+	&:extend(.reset-webkit-tap);
+}
+
+// others
+iframe, pre {
+	&:extend(.float-left-full);
+}
+
+dialog:not([open]) {
+	&:extend(.block);
+}
