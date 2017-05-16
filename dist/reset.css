@@ -9,7 +9,7 @@ body {
   height: 100%;
 }
 html {
-  font-size: 10px;
+  font-size: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: none;
@@ -186,11 +186,9 @@ dialog:not([open]) {
   position: fixed;
 }
 .default-transition {
-  -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 .no-transition {
-  -webkit-transition: none;
   transition: none;
 }
 .hide {
