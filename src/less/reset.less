@@ -18,7 +18,7 @@ body {
 	&:extend(.auto-overflow);
 }
 
-body, ul, li, ol, dl, dt, dd, p, iframe, form, div, h1, h2, h3, h4, h5, h6, label, a, fieldset, textarea, img, span, input, button, pre, code, article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, dialog, address {
+body, ul, li, ol, dl, dt, dd, p, iframe, form, div, h1, h2, h3, h4, h5, h6, label, a, fieldset, textarea, img, span, input, button, pre, code, article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, dialog, address, q, details, summary {
 	.reset-all;
 }
 
@@ -90,9 +90,9 @@ table {
 }
 
 // typography
-h1, h2, h3, h4, h5, h6, p, address {
-	font-weight: normal;
+h1, h2, h3, h4, h5, h6, p, address, q {
 	&:extend(.float-left-full, .align-left);
+	font-weight: normal;
 }
 
 address {
@@ -104,9 +104,9 @@ small {
 }
 
 a, a:hover, a:focus {
+	&:extend(.reset-webkit-tap);
 	text-decoration: none;
 	outline: none;
-	&:extend(.reset-webkit-tap);
 }
 
 // others
@@ -116,4 +116,9 @@ iframe, pre {
 
 dialog:not([open]) {
 	&:extend(.block);
+}
+
+// vue js
+[v-cloak] {
+	&:extend(.hide);
 }
