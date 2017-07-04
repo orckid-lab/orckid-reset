@@ -1,3 +1,41 @@
 @import "mixins";
 @import "reset";
 @import "utility";
+
+/**
+* General DOM structure
+*/
+
+body, .ui-modal--is-open {
+	overflow-y: scroll;
+}
+
+#global, #app {
+
+	&:extend(.relative, .full-width, .display-table, .full-height);
+	z-index: 1;
+
+}
+
+#global {
+
+	header, footer, main section, nav, p {
+		&:extend(.float-left-full);
+	}
+
+}
+
+#main-content {
+
+	&:extend(.display-table-row, .relative, .full-height, .hide-overflow);
+	z-index: 4;
+
+}
+
+
+#main-footer {
+
+	// default
+	&:extend(.display-table-row, .relative);
+
+}

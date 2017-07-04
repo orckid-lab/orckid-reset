@@ -4,7 +4,7 @@
 
 // page elements
 html, body {
-	height: 100%;
+	&:extend(.full-height);
 }
 
 html {
@@ -28,9 +28,9 @@ ul {
 
 // form inputs & button
 textarea, input, input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+	&:extend(.reset-webkit-tap, .no-border-radius);
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	&:extend(.reset-webkit-tap, .no-border-radius);
 	&:focus {
 		outline: 0 none;
 	}
@@ -48,12 +48,12 @@ input[type='number'] {
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	background-color: transparent !important;
 	color: rgb(0, 0, 0);
-	-webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+	-webkit-box-shadow: 0 0 0 1000px white inset !important;
 }
 
 select:-moz-focusring {
 	color: transparent;
-	text-shadow: 0 0 0 #000;
+	text-shadow: 0 0 0 black;
 }
 
 ::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
@@ -65,53 +65,51 @@ input:focus::-webkit-input-placeholder, input:focus::-moz-placeholder, input:foc
 }
 
 button {
-	line-height: normal !important;
 	&:extend(.reset-webkit-tap, .enable-pointer);
+	line-height: normal !important;
 	&:focus, &:active {
 		outline: 0;
 	}
 }
 
 button::-moz-focus-inner, input::-moz-focus-inner {
-	&:extend(.no-border);
-	padding: 0;
+	&:extend(.no-border, .no-padding);
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
+table, h1, h2, h3, h4, h5, h6, p, address, q, iframe, pre {
+	&:extend(.float-left-full);
+}
+
 // table
 table {
-	&:extend(.float-left-full);
 	border-collapse: collapse;
 	th, td {
-		vertical-align: middle;
 		&:extend(.align-center);
+		vertical-align: middle;
 	}
 }
 
 // typography
+@native-font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 h1, h2, h3, h4, h5, h6, p, address, q {
-	&:extend(.float-left-full, .align-left);
+	&:extend(.align-left);
 	font-weight: normal;
-}
-
-address {
-	font-style: normal;
 }
 
 small {
 	font-size: 85%;
 }
 
+a {
+	&:extend(.default-transition);
+}
+
 a, a:hover, a:focus {
 	&:extend(.reset-webkit-tap);
 	text-decoration: none;
 	outline: none;
-}
-
-// others
-iframe, pre {
-	&:extend(.float-left-full);
 }
 
 dialog:not([open]) {

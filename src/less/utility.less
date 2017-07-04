@@ -169,14 +169,6 @@
 	.width-auto;
 }
 
-.full-wrapper {
-	.absolute;
-	.full-width;
-	.full-height;
-	top: 0;
-	left: 0;
-}
-
 // flex center
 .flex-center {
 	display: flex;
@@ -193,15 +185,18 @@
 .image-responsive {
 	&:extend(.block,.full-width);
 }
+
 .full-figure, .circle-image {
 	&:extend(.float-left-full);
 }
+
 .full-figure {
 	margin: 0 0 25px;
 	img {
 		.image-responsive;
 	}
 }
+
 .circle-image {
 	margin: 0 0 18px;
 	img {
