@@ -27,11 +27,19 @@ body, .ui-modal--is-open {
 	&:extend(.display-table-row, .relative, .full-height, .hide-overflow);
 	z-index: 4;
 
+	p:empty {
+		&:extend(.hide);
+	}
 }
-
 
 #main-footer {
 
 	&:extend(.display-table-row, .relative);
+
+}
+
+.content {
+
+	&:extend(.float-left-full);
 
 }

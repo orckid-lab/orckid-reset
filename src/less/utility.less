@@ -166,14 +166,15 @@
 
 
 .flex-center {
-	display: flex;
+	&:extend(.flex);
 	align-items: center;
 	justify-content: center;
 }
 
 
-.image-responsive {
+.img-responsive {
 	&:extend(.block,.full-width);
+	height: auto;
 }
 
 .full-figure, .circle-image {
@@ -183,7 +184,7 @@
 .full-figure {
 	margin: 0 0 25px;
 	img {
-		.image-responsive;
+		.img-responsive;
 	}
 }
 
