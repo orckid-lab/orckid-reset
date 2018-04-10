@@ -188,13 +188,11 @@
 	.width-auto;
 }
 
-
 .flex-center {
 	&:extend(.flex);
 	align-items: center;
 	justify-content: center;
 }
-
 
 .img-responsive {
 	&:extend(.block,.full-width);
@@ -219,8 +217,22 @@
 	}
 }
 
+#global {
+	.mobile-only {
+		&:extend(.hide);
+	}
+	.desktop-only {
+		&:extend(.block);
+	}
+}
+
 @media only screen and (max-width: 680px) {
-	#global .desktop-only {
-		display: none !important;
+	#global {
+		.desktop-only {
+			display: none !important;
+		}
+		.mobile-only {
+			display: block !important;
+		}
 	}
 }
